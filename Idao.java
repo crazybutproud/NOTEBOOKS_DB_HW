@@ -12,7 +12,19 @@ public interface Idao {
 
     Map<String, Integer> getCountriesAndCountOfNotebooks() throws SQLException;
 
+    Map<String,Integer> getFirmsAndCountOfNotebooks () throws SQLException;
+
+    void mostAndLeastCountriesNBooks() throws SQLException;
+    void mostAndLeastFirmsNBooks() throws SQLException;
+    void getAllNBooksWithCoverTypeLike();
+    void getAllNBooksWithCountryLike ();
+    void getAllNBooksWithPAgeTypeLike();
+    void getAllNBooksWithPagesCountLike();
+    void addLineToDB() throws SQLException;
+    void removeLineFromDB() throws SQLException;
+    void updateLineInDB() throws SQLException;
+
     List<Notebook> queryByString(String query);
 
-    void closeConnection();
+    void closeConnection() throws SQLException;
 }
